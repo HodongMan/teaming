@@ -1,0 +1,43 @@
+/*index.css */
+
+/*
+
+1. we can use flex model instred of float 
+
+*/
+
+/*index page header*/
+
+/*index page main*/
+
+.index_page{
+	display:flex;
+	flex-flow:row wrap;
+
+}
+
+/*index page intro*/
+
+.index_page_intro{
+	width:50%;
+	height:100%;
+	order:1;
+}
+
+.index_page_contents{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+/*index page login form*/
+
+.index_page_login_form{
+	width:50%;
+	height:100%;
+	order:2;
+}
+
+input:placeholder-shown{
+	color:blue;
+}
