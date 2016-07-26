@@ -2,11 +2,13 @@
 
 /*
 
-1. we can use flex model instred of float 
+1. we can use flex model instred of float
+2. if designer wants to change, we must change only if comment alive
 
 */
 
 /*index page header*/
+
 
 /*index page main*/
 
@@ -19,25 +21,155 @@
 /*index page intro*/
 
 .index_page_intro{
+	background-color:#eee; /*왼쪽 배경색*/
 	width:50%;
 	height:100%;
 	order:1;
 }
 
 .index_page_contents{
+	width:500px; /*왼쪽 콘텐츠 크키*/
+	margin:0 auto;
 	display:flex;
 	align-items:center;
 	justify-content:center;
 }
 
+.index_page_intro_header{
+	margin-top:15%; /*왼쪽 콘텐츠 위쪽 제목 여백*/
+	margin-bottom:15%; /*왼쪽 콘텐츠 아래쪽 제목 여백*/
+}
+
+.index_page_intro_header > h1{
+	font-family: 'NanumBarunGothic', "Nanum Gothic", Dotum, sans-serif; /*제목 글씨체*/
+	font-size:30px; /*제목 크기*/
+	font-weight: bold;
+	text-align: center;
+}
+
+.index_page_intro_main{
+	margin-top:15%; /*왼쪽 콘텐츠 내용 위쪽 여백*/
+	margin-bottom:48%; /*왼쪽 콘텐츠 내용 아래쪽 여백*/
+}
+
+.index_page_intro_main > p{
+	font-family: 'NanumBarunGothic', "Nanum Gothic", Dotum, sans-serif; /*왼쪽 콘텐츠 내용 글씨체*/
+	font-size:20px; /*왼쪽 콘텐츠 내용 크기 */
+	text-align: center;
+}
+
+.text_point{
+	color:#e45847; /*왼쪽 콘텐츠 글씨 색 포인트*/
+}
+
+
 /*index page login form*/
 
-.index_page_login_form{
+.index_page_connect{
+	background-color:#eee; /*오른쪽 배경색*/
 	width:50%;
 	height:100%;
 	order:2;
 }
 
-input:placeholder-shown{
-	color:blue;
+.index_page_connect > div > figure > img{
+	width:500px; /*로고 크기 (디자이너가 크기 정해주면 나중에 max-width:100%로 바꿀 것)*/
+	height:100px; /*로고 크기 (디자이너가 크기 정해주면 나중에 max-height:100%로 바꿀 것)*/
+	margin-top:15%; /*로고 위쪽 배경*/
+	margin-bottom:10%; /*로고 아래 배경*/
+}
+
+.index_page_form_filed{
+	margin-top:10%; /*입력 폼 위쪽 배경*/
+	margin-bottom:36%; /*입력 폼 아래쪽 배경*/
+}
+
+
+
+input[type=email], input[type=password] {
+	color:#3c3c3c; /*입력폼 안쪽 글씨색*/
+	font-family: Helvetica, Arial, sans-serif; /*입력폼 안쪽 글씨체*/
+	font-size: 18px; /*입력폼 안쪽 글씨 크기*/
+	border-radius: 0;	
+	background-color: #fbfbfb; /*입려폼 배경*/
+	padding: 13px 13px 13px 54px; /*입력폼 안쪽 패딩*/
+	margin-bottom: 10px; /*입력폼 사이 마진*/
+	width:95%; /*입력폼 크기 */
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  	border: 3px solid rgba(0,0,0,0); /*입력폼 배경선*/
+}
+
+
+input:focus{
+	background: #fff; /*포커싱 후 배경색*/
+	box-shadow: 0;
+	border: 3px solid #3498db; /*포커싱 후 배경선*/
+	color: #3498db; /*포커싱 후 글씨 색*/
+	outline: none;
+ 	padding: 13px 13px 13px 54px; /*포커싱 후 안쪽 패딩*/
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+	background-color:white;
+}
+
+
+/* Icons ---------------------------------- */
+
+
+
+#email{
+	background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+.index_page_input_button{
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	float:left;
+	width: 95%;
+	border: #fbfbfb solid 4px;
+	cursor:pointer;
+	background-color: #3498db;
+	color:white;
+	font-size:24px;
+	padding-top:22px;
+	padding-bottom:22px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+ 	margin-top:-4px;
+ 	font-weight:700;
+}
+
+.index_page_input_button:hover{
+	background-color: white;
+	color: #0493bd;
+}
+
+.index_page_form_submit:hover {
+	color: #3498db;
+}
+
+
+/*왜 시@팔 이거 안돼지...*/
+.ease {
+	width: 0px;
+	height: 74px;
+	background-color: #fbfbfb;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.index_page_form_submit:hover .ease{
+  width:95%;
+  background-color:white;
 }
