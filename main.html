@@ -15,12 +15,81 @@
        
     </head>
     <body>
-        <header>
+        <header class = "main_page_header">
             <nav class = "main_page_nav">
                 <button class="hamburger">&#9776;</button>
+                
                 <img src = "" alt = "logo">
                 <img src = "" alt = "alarm">
             </nav>
         </header>
+        <main class = "main_page_main">
+            <aside class = "main_page_personal_list">
+                <ul>
+                    <a href="#"><li>LINK ONE</li></a>
+                    <a href="#"><li>LINK TWO</li></a>
+                    <a href="#"><li>LINK THREE</li></a>
+                    <a href="#"><li>LINK FOUR</li></a>
+                    <a href="#"><li>LINK FIVE</li></a>
+                </ul>
+            </aside>
+            <section class = "main_page_team_list">
+                <div class = "team_list_something">
+                    
+                    <div class = "list_main">
+                        <div class="progress-wrap progress" data-progress-percent="50">
+                            <div class="progress-bar progress"></div>
+                        </div>    
+                    </div>
+
+                    <div class = "list_option">
+                        
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+        <footer class = "main_page_footer">
+            
+        </footer>
+        <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            // on page load...
+    
+
+    $(document).ready(function(){
+        moveProgressBar();
+        moveAsideBar();
+    })
+
+    // on browser resize...
+    $(window).resize(function() {
+        moveProgressBar();
+
+    });
+
+    // SIGNATURE PROGRESS
+    function moveProgressBar() {
+        var getPercent = ($('.progress-wrap').data('progress-percent') / 100);
+        var getProgressWrapWidth = $('.progress-wrap').width();
+        var progressTotal = getPercent * getProgressWrapWidth;
+        var animationLength = 2500;
+        
+        // on page load, animate percentage bar to data percentage length
+        // .stop() used to prevent animation queueing
+        $('.progress-bar').stop().animate({
+            width: progressTotal
+        }, animationLength);
+    }
+
+    function moveAsideBar(){
+        $(".hamburger").click(function(){
+            $(".main_page_personal_list").slideToggle("fast", function(){
+
+            })
+        })
+    }
+
+        </script>
     </body>
 </html>
