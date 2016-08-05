@@ -35,19 +35,48 @@
             </aside>
             <section class = "main_page_team_list">
                 <div class = "team_list_something">
-                    
-                    <div class = "list_main">
-                        <div class="progress-wrap progress" data-progress-percent="50">
-                            <div class="progress-bar progress"></div>
-                        </div>    
-                    </div>
-
-                    <div class = "list_option">
+                    <div class = "list_sequence_main">
+                        <div class = "list_sequence_header">
+                            <h1 class = "">넥스터즈</h1>
+                            <span class = "">07.01~07.30</span>
+                            <div class = "list_sequence_header_icon">
+                                <img src = "" class = "" alt = "sequence_icon">
+                                <img src = "" class = "" alt = "sequence_icon">
+                                <img src = "" class = "" alt = "sequence_icon">
+                            </div>
+                        </div>
+                        <div class = "list_sequence_header_progress">
+                            <div>
+                                50%
+                            </div>
+                            <div class="progress-wrap progress" data-progress-percent="50">
+                                <div class="progress-bar progress"></div>
+                            </div>
+                        </div>
+                        <div class = "list_sequence_option">
                         
-                    </div>
+                        </div>
                     
+                    </div>
+                    <div class = "team_list_something team_list_create">
+                        <div class = "list_sequence_main" id = "myBtn">
+                            <p>+ 팀 만들기</p>
+                        </div>
+                    </div>
                 </div>
             </section>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal_content">
+                <span class="modal_close">x</span>
+                <p>Some text in the Modal..</p>
+              </div>
+
+            </div>
+
+
         </main>
         <footer class = "main_page_footer">
             
@@ -60,7 +89,8 @@
     $(document).ready(function(){
         moveProgressBar();
         moveAsideBar();
-    })
+        openCreateModal();
+    });
 
     // on browser resize...
     $(window).resize(function() {
@@ -88,6 +118,36 @@
 
             })
         })
+    }
+
+    function openCreateModal(){
+        
+        // Get the modal
+        var $modal = $('#myModal');
+
+        // Get the button that opens the modal
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal 
+        $("#myBtn").click(function() {
+            $modal.css("display", "block")
+        });
+
+        // When the user clicks on <span> (x), close the modal
+        $(".modal_close").click(function() {
+            $modal.css("display", "none")
+        });
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == $modal) {
+                $modal.css("display", "none")
+            }
+        }
+
+
     }
 
         </script>

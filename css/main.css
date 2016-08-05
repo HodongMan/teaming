@@ -2,7 +2,7 @@
 
 /*
 
-1. we can use flex model instred of float 
+1. we can use flex model instead of float 
 
 */
 
@@ -32,27 +32,39 @@
 	width:1250px;
 	height:100%;
 	margin:0 auto;
+
 }
 
 /*main page list something */
 
 .team_list_something{
+	width:800px;
+	height:100%;
+	margin:0 auto;
+}
+
+/*main page  list header */
+
+
+.list_sequence_main{
 
 }
 
-.list_main{
-
+.list_sequence_header > *{
+	display:inline-block;
 }
 
-/*main page progress bar */
+/*main page list progress bar */
 
+.list_sequence_header_progress > *{
+	display:inline-block;
+}
 .progress {
   width: 500px;
   height: 50px;
 }
 .progress-wrap {
 	background: #ddd;
-	margin: 20px 0;
 	overflow: hidden;
 	position: relative;
 }
@@ -65,6 +77,16 @@
 	top: 0;
 }
 
+/* main page create list */
+.team_list_create{
+	cursor:pointer;
+}
+
+
+.team_list_create > div > p{
+	text-align: center;
+}
+
 
 /* main page aside list */
 .main_page_personal_list{
@@ -72,4 +94,47 @@
 	display:none;
 	top:40;
 	left:0;
+}
+
+
+
+/* temp css*/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal_content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.modal_close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
