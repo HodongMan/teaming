@@ -15,42 +15,42 @@
 .index_page{
 	display:flex;
 	flex-flow:row wrap;
+	width:1000px;
+	height: 600px;
+	margin:8% auto;
+	border: 1px solid #888;
 
 }
 
 /*index page intro*/
 
 .index_page_intro{
-	background-color:#eee; /*왼쪽 배경색*/
+	background-color:white; /*왼쪽 배경색*/
 	width:50%;
-	height:100%;
 	order:1;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
 }
 
 .index_page_contents{
-	width:500px; /*왼쪽 콘텐츠 크키*/
 	margin:0 auto;
-	display:flex;
-	align-items:center;
-	justify-content:center;
 }
 
-.index_page_intro_header{
-	margin-top:15%; /*왼쪽 콘텐츠 위쪽 제목 여백*/
-	margin-bottom:15%; /*왼쪽 콘텐츠 아래쪽 제목 여백*/
+.index_page_intro_main{
+	margin-top:0; /*왼쪽 콘텐츠 내용 위쪽 여백*/
+	margin-bottom:0; /*왼쪽 콘텐츠 내용 아래쪽 여백*/
 }
 
-.index_page_intro_header > h1{
+.index_page_intro_main > h1{
 	font-family: 'NanumBarunGothic', "Nanum Gothic", Dotum, sans-serif; /*제목 글씨체*/
 	font-size:30px; /*제목 크기*/
 	font-weight: bold;
 	text-align: center;
 }
 
-.index_page_intro_main{
-	margin-top:15%; /*왼쪽 콘텐츠 내용 위쪽 여백*/
-	margin-bottom:48%; /*왼쪽 콘텐츠 내용 아래쪽 여백*/
-}
 
 .index_page_intro_main > p{
 	font-family: 'NanumBarunGothic', "Nanum Gothic", Dotum, sans-serif; /*왼쪽 콘텐츠 내용 글씨체*/
@@ -62,26 +62,40 @@
 	color:#e45847; /*왼쪽 콘텐츠 글씨 색 포인트*/
 }
 
+/*index page intro logo*/
+.index_page_intro_logo > img{
+	margin:0 auto;
+}
+
 
 /*index page login form*/
 
 .index_page_connect{
-	background-color:#eee; /*오른쪽 배경색*/
+	background-color:white; /*오른쪽 배경색*/
 	width:50%;
-	height:100%;
 	order:2;
+	display:flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.index_page_connect > div > figure > img{
-	width:500px; /*로고 크기 (디자이너가 크기 정해주면 나중에 max-width:100%로 바꿀 것)*/
-	height:100px; /*로고 크기 (디자이너가 크기 정해주면 나중에 max-height:100%로 바꿀 것)*/
-	margin-top:15%; /*로고 위쪽 배경*/
-	margin-bottom:10%; /*로고 아래 배경*/
+.index_page_login{
+	width:350px;
+	margin:0 auto;
 }
+
+/*쓸데 없는 코드 */
+.index_page_connect > div > figure > img{
+	width:200px; /*로고 크기 (디자이너가 크기 정해주면 나중에 max-width:100%로 바꿀 것)*/
+	height:100px; /*로고 크기 (디자이너가 크기 정해주면 나중에 max-height:100%로 바꿀 것)*/
+	margin-top:0; /*로고 위쪽 배경*/
+	margin-bottom:0; /*로고 아래 배경*/
+}
+
 
 .index_page_form_filed{
-	margin-top:10%; /*입력 폼 위쪽 배경*/
-	margin-bottom:36%; /*입력 폼 아래쪽 배경*/
+	margin-top:0; /*입력 폼 위쪽 배경*/
+	margin-bottom:0; /*입력 폼 아래쪽 배경*/
 }
 
 
@@ -145,6 +159,7 @@ input:focus, textarea:focus {
 	transition: all 0.3s;
  	margin-top:-4px;
  	font-weight:700;
+ 	border-radius: 25px;
 }
 
 .index_page_input_button:hover{
