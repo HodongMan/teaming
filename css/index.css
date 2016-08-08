@@ -99,7 +99,6 @@
 }
 
 
-
 input[type=email], input[type=password] {
 	color:#3c3c3c; /*입력폼 안쪽 글씨색*/
 	font-family: Helvetica, Arial, sans-serif; /*입력폼 안쪽 글씨체*/
@@ -172,7 +171,7 @@ input:focus, textarea:focus {
 }
 
 
-/*왜 시@팔 이거 안돼지...*/
+/*왜 시@팔 이거 안돼지...
 .ease {
 	width: 0px;
 	height: 74px;
@@ -188,3 +187,5 @@ input:focus, textarea:focus {
   width:95%;
   background-color:white;
 }
+
+*/
