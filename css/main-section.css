@@ -89,30 +89,36 @@
 
 /* main */
 
+.main{
+	display:flex;
+	flex-flow:row wrap;
+}
+
 
 /*aside role list*/
-.main_section_role_list{
+.aside_section_role_list{
 	background: #444;
-	width: 330px;
+	width: 20%;
 	height: 550px;
 	overflow: auto;
 	color: rgba(255, 255, 255, .9);
 	font-weight: 200;
+
 	
 }
 
-.main_section_role_list ul:hover {
+.aside_section_role_list ul:hover {
   cursor: pointer;
 }
 
-.main_section_role_list ul{
+.aside_section_role_list ul{
 	margin:0px;
 	padding: 0px;
 }
 
 
-.main_section_role_list ul li {
-	width:270px;
+.aside_section_role_list ul li {
+	width:90%;
 
 	display:inline-block;
 	list-style: none;
@@ -120,15 +126,123 @@
 	background: rgba(0,0,0,.2);
 	border-top: 3px solid rgba(0, 0, 0, .2);
 	line-height: 50px;
-	padding-left: 50px;
+	padding-left: 10%;
 	font-size:18px;
 	font-family: 'NanumBarunGothic', "Nanum Gothic", Dotum, sans-serif; /*제목 글씨체*/
 	transition: all 0.2s ease;
 }
-.main_section_role_list ul li:hover {
+.aside_section_role_list ul li:hover {
   background: rgba(255,255,255,.05);
   font-size:20px;
 }
 
 
 
+/*main setion*/
+
+.main_section{
+	width:60%;
+}
+
+
+/*main section header*/
+
+.main_section_job_header{
+	width:100%;
+}
+
+/*main section info*/
+
+.main_section_job_info{
+	display:flex;
+	flex-flow:row wrap;
+	width:100%;
+}
+
+
+
+/*main section info circle progress */
+
+.canvas-wrap {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+
+span#procent {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	font-size: 50px;
+	transform: translate(-50%, -50%);
+	color: #3949AB;
+}
+
+span#procent::after {
+	content: '%';
+}
+
+
+/*main section  info header*/
+
+.main_section_job_info_header{
+	display:flex;
+	flex-direction: column;	
+	align-items: center;
+	justify-content: center;
+	width:20%;	
+}
+
+/*main section  info condition*/
+.main_section_job_info_condition{
+	display:flex;
+	width:40%;
+	align-items: center;
+	justify-content: center;
+}
+
+
+/*main section  info member*/
+
+
+.main_section_job_info_member{
+	display:flex;
+	width:20%;
+
+	align-items: center;
+	justify-content: center;
+}
+
+/*main section list nav */
+
+.main_section_job_nav{
+	width:100%;
+}
+
+.main_section_job_nav > div > ul{
+	list-style: none;
+	margin: 0;
+	padding:0;
+}
+
+.main_section_job_nav > div > ul > li{
+	display:inline-block;
+	cursor:pointer;
+}
+
+
+/*main section job list*/
+
+.main_section_job_list{
+	width:100%;
+}
+
+.main_section_job_list > div{
+	width:30%;
+	height:100px;
+	display:inline-flex;
+	align-items: center;
+	justify-content: center;
+}

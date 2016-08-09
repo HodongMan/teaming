@@ -43,8 +43,8 @@
 			</div>
 		</div>
 	</header>
-	<main>
-		<aside class = "main_section_role_list">
+	<main class = "main">
+		<aside class = "aside_section_role_list">
 			<ul>
 				<li>디자이너</li>
 				<li>개발자</li>
@@ -52,13 +52,113 @@
 				<li>NEW +</li>
 			</ul>
 		</aside>
-		<section>
+		<section class = "main_section">
 			
+			<article class = "main_section_job_header">
+				<div class = "main_section_job_info">
+					<div class="canvas-wrap">
+	  					<canvas id="canvas" width="150" height="150"></canvas>
+	  					<span id="procent"></span>
+					</div>
+					<div class = "main_section_job_info_header">
+						<span class = "">INFORMATHION</span><br/>
+						<span class = "">총 N개의 LIST</span>
+					</div>
+					<div class = "main_section_job_info_condition">
+						<span class = "">TO DO 6</span>
+						<span class = "">DONE 2</span>
+						<span class = "">DOING 4</span>
+					</div>
+					<div class = "main_section_job_info_member">
+						
+					</div>
+				</div>
+				<div class = "main_section_job_nav">
+					<div>
+						<ul>
+							<li>ALL</li>
+							<li>DONE</li>
+							<li>DOING</li>
+							<li>TO DO</li>
+						</ul>
+					</div>
+					<div>
+						DELETE
+					</div>
+				</div>
+			</article>
+
+			<article class = "main_section_job_list">
+				<div class = "job_something">
+					<div>
+						<span class = "job_name">폰트 확정</span><br>
+						<span class = "job_date">2016.07.01 ~ 2016.07.14</span>
+					</div>
+				</div>
+				<div class = "job_something">
+					<div>
+						<span class = "job_name">폰트 확정</span><br>
+						<span class = "job_date">2016.07.01 ~ 2016.07.14</span>
+					</div>
+				</div>
+				<div class = "job_something">
+					<div>
+						<span class = "job_name">폰트 확정</span><br>
+						<span class = "job_date">2016.07.01 ~ 2016.07.14</span>
+					</div>
+				</div>
+				<div class = "job_something">
+					<div>
+						<span class = "job_name">폰트 확정</span><br>
+						<span class = "job_date">2016.07.01 ~ 2016.07.14</span>
+					</div>
+				</div>
+			</article>
+
 		</section>
 		<aside>
 			
 		</aside>
 	</main>
+	<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+	<script type="text/javascript">		
+		window.onload = function() {
+			var $canvas_circle_progress = $('#canvas'),
+		      $span_Procent = $('#procent'),
+		       make_circle = $canvas_circle_progress.get(0).getContext("2d");
+		 
+			const pos_X = $canvas_circle_progress.width() / 2,
+		   		pos_Y = $canvas_circle_progress.height() / 2,
+		   		fps_make_circle = 1000 / 200, one_procent = 360 / 100;
+			
+			var procent = 0, result = one_procent * 64;
+		  
+			make_circle.lineCap = 'round';
+			arcMove();
 
+			function arcMove(){
+		   		var deegres = 0;
+		   		var acrInterval = setInterval (function() {
+			   		deegres += 1;
+			   		make_circle.clearRect( 0, 0, $canvas_circle_progress.width(), $canvas_circle_progress.height());
+			   		procent = deegres / one_procent;
+			   		$span_Procent.text(procent.toFixed());
+
+			   		make_circle.beginPath();
+			   		make_circle.arc( pos_X, pos_Y, 70, (Math.PI/180) * 270, (Math.PI/180) * (270 + 360) );
+			   		make_circle.strokeStyle = '#b1b1b1';
+			   		make_circle.lineWidth = '10';
+			   		make_circle.stroke();
+
+			   		make_circle.beginPath();
+			   		make_circle.strokeStyle = '#3949AB';
+			   		make_circle.lineWidth = '10';
+			   		make_circle.arc( pos_X, pos_Y, 70, (Math.PI/180) * 270, (Math.PI/180) * (270 + deegres) );
+			   		make_circle.stroke();
+			   		if( deegres >= result ) clearInterval(acrInterval);
+		   		}, fps_make_circle);
+		   	}		  
+		}
+	</script>
 </body>
 </html>
