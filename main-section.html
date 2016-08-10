@@ -76,41 +76,55 @@
 				<div class = "main_section_job_nav">
 					<div>
 						<ul>
-							<li>ALL</li>
-							<li>DONE</li>
-							<li>DOING</li>
-							<li>TO DO</li>
+							<li id = "all">ALL</li>
+							<li id = "done">DONE</li>
+							<li id = "doing">DOING</li>
+							<li id = "todo">TO DO</li>
 						</ul>
 					</div>
 					<div>
-						DELETE
 					</div>
 				</div>
 			</article>
 
 			<article class = "main_section_job_list">
-				<div class = "job_something">
-					<div>
-						<span class = "job_name">폰트 확정</span><br>
+				<div class = "job_something todo">
+					<div class = "">
+						<span class = "job_name ">메인 컨셉 잡기	</span><br>
 						<span class = "job_date">2016.07.01 ~ 2016.07.14</span>
 					</div>
-				</div>
-				<div class = "job_something">
-					<div>
-						<span class = "job_name">폰트 확정</span><br>
-						<span class = "job_date">2016.07.01 ~ 2016.07.14</span>
+					<div class = "">
+						
 					</div>
 				</div>
-				<div class = "job_something">
-					<div>
-						<span class = "job_name">폰트 확정</span><br>
+
+				<div class = "job_something todo">
+					<div class = "">
+						<span class = "job_name">와이어 프레임</span><br>
 						<span class = "job_date">2016.07.01 ~ 2016.07.14</span>
 					</div>
+					<div class = "">
+						
+					</div>
 				</div>
-				<div class = "job_something">
-					<div>
-						<span class = "job_name">폰트 확정</span><br>
+				
+				<div class = "job_something done">
+					<div class = "">
+						<span class = "job_name">B 시안 완성</span><br>
 						<span class = "job_date">2016.07.01 ~ 2016.07.14</span>
+					</div>
+					<div class = "">
+						
+					</div>
+				</div>
+
+				<div class = "job_something doing">
+					<div class = "">
+						<span class = "job_name">로그인 페이지</span><br>
+						<span class = "job_date">2016.07.01 ~ 2016.07.14</span>
+					</div>
+					<div class = "">
+						
 					</div>
 				</div>
 			</article>
@@ -123,6 +137,7 @@
 	<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
 	<script type="text/javascript">		
 		window.onload = function() {
+			showJobListByCond();
 			var $canvas_circle_progress = $('#canvas'),
 		      $span_Procent = $('#procent'),
 		       make_circle = $canvas_circle_progress.get(0).getContext("2d");
@@ -158,6 +173,18 @@
 			   		if( deegres >= result ) clearInterval(acrInterval);
 		   		}, fps_make_circle);
 		   	}		  
+		}
+
+		function showJobListByCond(){
+			$("#all, #done, #doing, #todo").click(function(){
+				var click_id_Text = $(this).attr("id");
+				if(click_id_Text === "all"){
+					$(".job_something").show();
+				}else{
+					$(".job_something").hide();
+					$("." + click_id_Text).show();
+				}
+			});
 		}
 	</script>
 </body>
