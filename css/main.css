@@ -8,7 +8,7 @@
 
 /*main page header*/
 body{
-	background-color: #58D3F7;
+	background-color: #45bdf4;
 }
 
 .main_page_header{
@@ -22,6 +22,7 @@ body{
 .main_page_nav{
 	display:flex;
 	justify-content:space-between;
+	align-items: center;
 }
 
 
@@ -32,31 +33,37 @@ body{
 /*main page main list*/
 
 .main_page_team_list{
-	width:1250px;
+	width:670px;
 	height:100%;
-	margin:0 auto;
+	margin:80px auto;
 
 }
 
 /*main page list something */
 
 .team_list_something{
-	width:800px;
-	height:100%;
+	width:670px;
+	height:164px;
 	margin:0 auto;
-	background-color:white;
 	border-radius: 10px;
+	border: solid 1px #979797;
+	margin-bottom:15px;
 }
 
 /*main page  list header */
 
 
 .list_sequence_main{
+	background-color:#ffffff;
+}
 
+.list_sequence_header{
+	margin-left: 39px;
 }
 
 .list_sequence_header > *{
 	display:inline-block;
+	
 }
 
 /*main page list progress bar */
@@ -65,9 +72,36 @@ body{
 	display:inline-block;
 }
 
+.list_sequence_header > h1{
+	margin-top:35px;
+	font-family: Avenir;
+	font-size: 28px;
+	font-weight: 900;
+	text-align: center;
+	color: #282828;
+	margin-right:10px;
+}
+
+.list_sequence_header > span{
+	font-family: 'Noto Sans Gothic', "Apple SD Gothic Neo", Dotum, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	text-align: center;
+	color: #3f3f3f;
+}
+
+.header_date{
+	color: #909090!important;
+}
+
+.list_sequence_header_progress{
+	padding-left: 39px;
+	height:50px;
+}
 .progress {
-  width: 500px;
-  height: 50px;
+	width: 507.8px;
+	height: 19px;
+	border-radius: 100px;
 }
 .progress-wrap {
 	background: #ddd;
@@ -77,10 +111,29 @@ body{
 
 .progress-bar {
 	width:0px;
-	background: #f80;
+	background: #1460a0;
 	position: absolute;
 	left: 0;
 	top: 0;
+}
+
+.progress_percent{
+
+	font-family: 'Noto Sans Gothic', "Apple SD Gothic Neo", Dotum, sans-serif;
+	font-size: 30px;
+	font-weight: 600;
+	text-align: center;
+	color: #262c39;
+}
+
+.list_sequence_header_icon{
+	float:right;
+	margin-top:7px;
+	margin-right:17px;
+}
+
+.list_sequence_header_icon > img{
+	cursor:pointer;
 }
 
 /* main page create list */
@@ -89,6 +142,7 @@ body{
 	display:flex;
 	align-items: center;
 	justify-content: center;
+	background-color: #e0e0e0;
 }
 
 
