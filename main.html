@@ -70,26 +70,32 @@
             <!-- The Modal -->
             <div id="myModal" class="modal">
 
-              <!-- Modal content -->
+              <!-- Modal content 끝나고 required  반드시 입력할것 -->
               <div class="modal_content">
-                <div>
-                  <form action = "/" method = "post">
-                      <label></label>
-                      <input type = "text" name = "" required>
-                      <label></label>
-                      <textarea></textarea>
-                      <label></label>
-                      <input type = "number" name = "" min = "0" required>
-                      <label></label>
-                      <input type = "datetime" name = "" required>
-                      <input type = "date" name = "" required>
-                  </form>
-                </div>
-                <span class="modal_close">x</span>
-                <div class = "create_list_form">
-                    <form action = "" method = "POST"> 
-                        
-                    </form>
+                <form action = "main-section.html" method = "post" class = "form_wrapper">
+                    <div class = "form_row_wrapper">
+                        <span class = "form_text">팀 이름</span>
+                        <input type = "text" name = "team_name" class = "team_name" placeholder="텍스트입력">
+                    </div>
+                    <div class = "form_row_wrapper">
+                        <span class = "form_text">설명</span>
+                        <textarea name = "team_" class = "team_" placeholder="텍스트입력" ></textarea>
+                    </div>
+                    <div class = "form_row_wrapper">
+                        <span class = "form_text">섹션개수</span>
+                        <input type = "number" name = "section_count" class = "section_count" value = "1" min = "1">
+                    </div>
+                    <div class = "form_row_wrapper">
+                        <span class = "form_text">프로젝트 기간</span>
+                        <input type = "date" name = "start_date" class = "start_date">
+                        <input type = "date" name = "end_date" class = "end_date">
+                    </div>
+                    <div class = "form_row_wrapper form_row_submit">
+                        <input type = "submit" value = "등록완료" class = "submit_button">
+                    </div>
+                </form>
+                <div class = "modal_close">
+                    <img src = "img/main/exit_bt.png" alt = "exit_button">
                 </div>
               </div>
 
