@@ -24,7 +24,7 @@
         <main class = "index_page">
             <section class = "index_page_intro">
                 <div class = "index_page_intro_logo">
-                    <img src="img/teaming_logo.png" alt = "intro_logo">
+                    <img src="img/element_login.png" alt = "intro_logo" id = "intro_logo"> <!-- 하... 이미지만 움직이기 -->
                 </div>
                 <div class = "index_page_contents index_page_intro_main">
                     <p>Tming은 업무 진행사항을 시각화 해줍니다.</p>
@@ -38,17 +38,14 @@
 
             <section class = "index_page_connect">
                 <div class = "index_page_login">
-                    <div class = "">
-                        <h1>Welcome!</h1>
+                    <div class = "index_page_text">
+                        <p><span class = "index_page_header">Welcome!</span><br><span class = "index_page_header_text">Login your account</span></p>
                     </div>
-                    <div>
-                        <p>Login to your account</p>
+                    <div class = "index_page_facebook_login">
+                        <img src = "img/bt_login.png" alt = "facebook-login-button">
                     </div>
-                    <form class = "" aciton = "/" method = "post">
+                    <form class = "hidden_ha" aciton = "/" method = "post">
                         <div class = "index_page_form_filed">
-                            <div class = "">
-                             <p>LOGIN</p>   
-                            </div>
                             <div class = "index_page_form_field-wrap">
                                 <input type = "email" name = "" placeholder = "emai" id = "email" required>
                             </div>
@@ -64,5 +61,17 @@
                 </div>
             </section>
         </main>
+
+        <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+        <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#intro_logo").click(function(){
+                    $(this).effect("bounce", {times : 4}, 1000);
+                });
+            })
+
+        </script>
     </body>
 </html>
