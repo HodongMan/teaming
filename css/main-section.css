@@ -12,51 +12,64 @@
 .main_section_nav{
 	display:flex;
 	justify-content:space-between;
-	width:100%;
+	width:100%
 	height:40px;
+}
+
+.main_section_nav  >.alarm{
+	max-height: 28px;
 }
 
 /* main section header*/
 
 
 .main_section_header{
-	width:100%;
+	width:1903.4px;
 	height:150px;
-	background-color: #67CEFA;
+	background-color: #45bdf4;
 	display: inline-flex;
 }
 
 .main_section_header_info{
+	width:405px;
+	position:relative;
 	display:flex;
 	align-items: center;
-	width:25%;
+	
+}
+
+.main_section_header_info span{
+	padding-left:88px;
 }
 
 
-.main_section_header_info > p{
-	font-family: 'NanumBarunGothic', "Nanum Gothic", Dotum, sans-serif; /*제목 글씨체*/
-	font-size:20px; /*제목 크기*/
-	color:white;
-}
 .main_section_header_info .info_header{
 	font-size:40px ;
-	font-weight: bold ;
+	font-family: Avenir;
+	font-size: 28px;
+	font-weight: 900;
+	color: #ffffff;
+}
 
+.main_section_header_info .info_text{
+  font-family: 'Noto Sans Gothic', "Apple SD Gothic Neo", Dotum, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.main_section_header_allmember{
+	position: absolute;
+	top:15px;
+	right:15px;
 }
 
 .main_section_header_progress{
 	display:flex;
-	width:50%;	
+	width:1000px;
 	align-items: center;
 	justify-content: center;
 
-}
-
-
-.main_section_header_member{
-	display:flex;
-	align-items: center;
-	width:25%;
 }
 
 
@@ -64,43 +77,78 @@
 	
 }
 
+.progress_percent{
+	font-family: Avenir;
+	font-size: 40px;
+	font-weight: 500;
+	color: #ffffff;
+	padding-right:15px;
+}
 
+.progress_percent > .percent_sign{
+	font-family: Avenir;
+	font-size: 26px;
+	font-weight: 900;
+	color: #ffffff;
+}
 
 
 .progress {
-  width: 500px;
-  height: 50px;
+	width: 669px;
+	height: 29px;
+	border-radius: 100px;
+	border: solid 3px #ffffff;
 }
 .progress-wrap {
-	background: white;
-	border-radius: 10px;
+	background: #fff;
 	overflow: hidden;
 	position: relative;
 }
 
 .progress-bar {
 	width:0px;
-	border-radius: 10px;
-	background: #f80;
+	background: #1460a0;
+	border: solid 3px #ffffff;
 	position: absolute;
 	left: 0;
 	top: 0;
 }
 
+.left_days{
+	padding-left: 15px;
+}
+
+.left_days  .Ddays{
+	width: 68.7px;
+	height: 25px;
+	border: solid 2px #ffffff;
+	border-radius: 25px;
+	font-family: Avenir;
+	font-size: 15px;
+	font-weight: 900;
+	color: #ffffff;
+	
+}
+
+.left_days .dates{
+	font-family: AppleSDGothicNeo;
+	font-size: 14px;
+	font-weight: 700;
+	color: #ffffff;
+}
 /* main */
 
 .main{
+	width: 100%;
 	display:flex;
-	flex-flow:row wrap;
 }
 
 
 /*aside role list*/
 .aside_section_role_list{
-	background: #444;
-	width: 20%;
-	height: 550px;
-	overflow: auto;
+	width: 286.8px;
+	height: 900.1px;
+	background-color: #262c39;
 	color: rgba(255, 255, 255, .9);
 	font-weight: 200;
 
@@ -118,7 +166,7 @@
 
 
 .aside_section_role_list ul li {
-	width:90%;
+	width:205.8px;
 
 	display:inline-block;
 	list-style: none;
@@ -126,14 +174,25 @@
 	background: rgba(0,0,0,.2);
 	border-top: 3px solid rgba(0, 0, 0, .2);
 	line-height: 50px;
-	padding-left: 10%;
-	font-size:18px;
-	font-family: 'NanumBarunGothic', "Nanum Gothic", Dotum, sans-serif; /*제목 글씨체*/
+	padding-left: 83px;
+	font-size:20px;
+	font-weight: 500;
+	font-family:  'Noto Sans Gothic', "Apple SD Gothic Neo", Dotum, sans-serif;
 	transition: all 0.2s ease;
+	color: #808080;
 }
 .aside_section_role_list ul li:hover {
   background: rgba(255,255,255,.05);
-  font-size:20px;
+  font-size:22px;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.aside_section_role_list ul li:active{
+  background: rgba(255,255,255,.05);
+  font-size:22px;
+  color: #ffffff;
+  font-weight: 800;
 }
 
 
@@ -141,14 +200,19 @@
 /*main setion*/
 
 .main_section{
-	width:60%;
+	width:1632px;
 }
 
 
 /*main section header*/
 
 .main_section_job_header{
-	width:100%;
+	width:1582px;
+	margin-left:15px;
+	margin-top:16.5px;
+	background-color: #ffffff;
+	box-shadow: 0 2px 1px 0 rgba(231, 224, 224, 0.5);
+	border: solid 2px #ced4e0;
 }
 
 /*main section info*/
@@ -156,7 +220,11 @@
 .main_section_job_info{
 	display:flex;
 	flex-flow:row wrap;
-	width:100%;
+	width:99%;
+}
+
+.main_section_job_info > div{
+	margin-left:30px;
 }
 
 
@@ -165,8 +233,8 @@
 
 .canvas-wrap {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 103.5px;
+  height: 105px;
 }
 
 
@@ -177,11 +245,18 @@ span#procent {
 	top: 50%;
 	font-size: 50px;
 	transform: translate(-50%, -50%);
-	color: #3949AB;
+	font-size: 30px;
+	font-weight: 900;
+	color: #262c39;
+	font-family: Avenir;
 }
 
 span#procent::after {
 	content: '%';
+	font-family: Arial-MT;
+	font-size: 15px;
+	font-weight: 700;
+	color: #262c39;
 }
 
 
@@ -190,17 +265,35 @@ span#procent::after {
 .main_section_job_info_header{
 	display:flex;
 	flex-direction: column;	
-	align-items: center;
 	justify-content: center;
-	width:20%;	
 }
+
+.main_section_job_info_header .list_header{
+	font-family: Avenir;
+	font-size: 13px;
+	font-weight: 900;
+	color: #2b3245;
+}
+
+.main_section_job_info_header .list_info{
+	font-size: 30px;
+	font-weight: 700;
+	color: #2b3245;
+}
+
 
 /*main section  info condition*/
 .main_section_job_info_condition{
 	display:flex;
-	width:40%;
-	align-items: center;
-	justify-content: center;
+	padding-top:70px;
+}
+
+.main_section_job_info_condition > span{
+	font-family: Avenir;
+	font-size: 12px;
+	font-weight: 900;
+	color: #7d7d7d;
+	margin-left:10px;
 }
 
 
@@ -218,31 +311,65 @@ span#procent::after {
 /*main section list nav */
 
 .main_section_job_nav{
-	width:100%;
+	width:408px;
+	height:34px;
+	display:inline-flex;
+	justify-content:space-between;
+	margin-left:30px;
+
 }
 
-.main_section_job_nav > div > ul{
-	list-style: none;
-	margin: 0;
-	padding:0;
+.main_section_job_nav > div{
+	width:112.7px;
+	height:34px;
+
+	display:flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.main_section_job_nav > div > ul > li{
-	display:inline-block;
-	cursor:pointer;
+.main_section_job_nav > div:hover{
+	border-radius: 100px;
+	background-color: #262c39;
+}
+
+.main_section_job_nav > div:hover > p{
+	color:#ffffff;
+}
+
+
+.main_section_job_nav > div > p{
+	font-family: Avenir;
+	font-size: 12px;
+	font-weight: 900;
+	text-align: center;
+	color: #a2a2a2;
 }
 
 
 /*main section job list*/
 
 .main_section_job_list{
-	width:100%;
+	width:1114px;
+	display:flex;
+	flex-flow:row wrap;
+	background-color: #ebeef0;
+	box-shadow: 3px 2px 3px 0 rgba(232, 224, 224, 0.5);
+	border: solid 2px #ced4e0;
+	margin-left:15px;
 }
 
-.main_section_job_list > div{
-	width:30%;
-	height:100px;
-	display:inline-flex;
+.job_something{
+	width:330px;
+	height:130px;
+	margin:16px;
+	background-color: #ffffff;
+	border: solid 2px #d2d9e7;
+	border-radius: 10px;
+}
+
+.create{
+	display:flex;
 	align-items: center;
 	justify-content: center;
 }

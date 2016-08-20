@@ -17,29 +17,35 @@
 
 	<header>
 		<nav class = "main_section_nav">
-          <button class="hamburger">&#9776;</button>
+          <div></div>
           
-          <img src = "img/teaming_logo.png" alt = "logo" height = "40px">
-          <img src = "" alt = "alarm">
+          <img src = "img/main-section/teaming_logo.png" alt = "logo" height = "40px">
+          <img src = "img/main-section/noti_icon.png"  class = "alarm" alt = "alarm">
 		</nav>
 
 		<div class = "main_section_header">
 			<div class = "main_section_header_info">
 				<p>
-					<span class = "info_header">put the Header</span><br>
-					put the Explanation
+					<span class = "info_header">NEXTERS 9TH</span><br>
+					<span class = "info_text">디자이너 개발자로 이뤄진 IT 웹, 앱 프로젝트</span>
 				</p>
+				<div class = "main_section_header_allmember">
+					<img src = "img/main-section/icon_allmember.png" / alt = "icon_allemember">
+				</div>
 			</div>
 			<div class = "main_section_header_progress">
+				<p class = "progress_percent">
+          		50<span class = "percent_sign">%</span>
+          	</p>
 				<div class="progress-wrap progress" data-progress-percent="50">
             	 	<div class="progress-bar progress"></div>
           	</div>
-          	<p>
-          		50%
-          	</p>
-			</div>
-			<div class = "main_section_header_member">
-				<img src = "" alt = "show member" id = "">
+          	<div class = "left_days">
+          		<p>
+					<span class = "Ddays">D-15</span><br>
+					<span class = "dates">2016.7.25 ~ 2016.8.30</span>
+					</p>
+          	</div>
 			</div>
 		</div>
 	</header>
@@ -49,7 +55,7 @@
 				<li>디자이너</li>
 				<li>개발자</li>
 				<li>기획자</li>
-				<li>NEW +</li>
+				<li>NEW SECTION+</li>
 			</ul>
 		</aside>
 		<section class = "main_section">
@@ -57,12 +63,12 @@
 			<article class = "main_section_job_header">
 				<div class = "main_section_job_info">
 					<div class="canvas-wrap">
-	  					<canvas id="canvas" width="150" height="150"></canvas>
+	  					<canvas id="canvas" width="103.5" height="105"></canvas>
 	  					<span id="procent"></span>
 					</div>
 					<div class = "main_section_job_info_header">
-						<span class = "">INFORMATHION</span><br/>
-						<span class = "">총 N개의 LIST</span>
+						<span class = "list_header">INFORMATHION</span><br/>
+						<span class = "list_info">총 N개의 LIST</span>
 					</div>
 					<div class = "main_section_job_info_condition">
 						<span class = "">TO DO 6</span>
@@ -74,20 +80,25 @@
 					</div>
 				</div>
 				<div class = "main_section_job_nav">
-					<div>
-						<ul>
-							<li id = "all">ALL</li>
-							<li id = "done">DONE</li>
-							<li id = "doing">DOING</li>
-							<li id = "todo">TO DO</li>
-						</ul>
+					<div id = "all">
+						<p>ALL</p>
 					</div>
-					<div>
+					<div id = "done">
+						<p>DONE</p>
+					</div>
+					<div id = "doing">
+						<p>DOING</p>
+					</div>
+					<div id = "todo">
+						<p>TO DO</p>
 					</div>
 				</div>
 			</article>
 
 			<article class = "main_section_job_list">
+				<div class = "job_something create">
+					<img src="img/main-section/bt_add_list.png" alt = "create_job">
+				</div>
 				<div class = "job_something todo">
 					<div class = "">
 						<span class = "job_name ">메인 컨셉 잡기	</span><br>
@@ -160,15 +171,15 @@
 			   		$span_Procent.text(procent.toFixed());
 
 			   		make_circle.beginPath();
-			   		make_circle.arc( pos_X, pos_Y, 70, (Math.PI/180) * 270, (Math.PI/180) * (270 + 360) );
-			   		make_circle.strokeStyle = '#b1b1b1';
-			   		make_circle.lineWidth = '10';
+			   		make_circle.arc( pos_X, pos_Y, 49, (Math.PI/180) * 270, (Math.PI/180) * (270 + 360) );
+			   		make_circle.strokeStyle = '#e6e6e6';
+			   		make_circle.lineWidth = '5';
 			   		make_circle.stroke();
 
 			   		make_circle.beginPath();
-			   		make_circle.strokeStyle = '#3949AB';
-			   		make_circle.lineWidth = '10';
-			   		make_circle.arc( pos_X, pos_Y, 70, (Math.PI/180) * 270, (Math.PI/180) * (270 + deegres) );
+			   		make_circle.strokeStyle = '#ffc120';
+			   		make_circle.lineWidth = '5';
+			   		make_circle.arc( pos_X, pos_Y, 49, (Math.PI/180) * 270, (Math.PI/180) * (270 + deegres) );
 			   		make_circle.stroke();
 			   		if( deegres >= result ) clearInterval(acrInterval);
 		   		}, fps_make_circle);
