@@ -12,7 +12,7 @@
 .main_section_nav{
 	display:flex;
 	justify-content:space-between;
-	width:100%
+	width:1900px;
 	height:40px;
 }
 
@@ -360,12 +360,43 @@ span#procent::after {
 }
 
 .job_something{
+	display: flex;
 	width:330px;
 	height:130px;
 	margin:16px;
 	background-color: #ffffff;
 	border: solid 2px #d2d9e7;
 	border-radius: 10px;
+}
+
+.job_something .job_perfection{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width:80px;
+	height:130px;
+}
+
+.job_something .job_info{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	width:250px;
+	height:130px;
+}
+
+.job_something .job_name{
+	font-family: 'Noto Sans Gothic', "Apple SD Gothic Neo", Dotum, sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	color: #3a4661;
+}
+
+.job_something .job_date{
+	font-family: Avenir;
+	font-size: 14px;
+	font-weight: 900;
+	color: #a8a8a8;
 }
 
 .create{
