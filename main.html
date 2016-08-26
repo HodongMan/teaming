@@ -71,7 +71,7 @@
 
               <!-- Modal content 끝나고 required  반드시 입력할것 -->
               <div class="modal_content">
-                <form action = "main-section.html" method = "post" class = "form_wrapper">
+                <form action = "/main-section.html" method = "get" class = "form_wrapper">
                     <div class = "form_row_wrapper">
                         <span class = "form_text">팀 이름</span>
                         <input type = "text" name = "team_name" class = "team_name" placeholder="텍스트입력">
@@ -105,23 +105,22 @@
         <footer class = "main_page_footer">
             
         </footer>
+
         <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
-        <script type="text/javascript" src = "js/view.js"></script>
+        <script type="text/javascript" src = "js/views/progress_bar_view.js"></script>
+        <script type="text/javascript" src = "js/views/modal_view.js"></script>
+        <script type="text/javascript" src = "js/views/change_icon_view.js"></script>
         <script type="text/javascript">
-            // on page load...
-    
 
     $(document).ready(function(){
-        moveProgressBar();
-        moveAsideBar();
-        openCreateModal();
-        changeCondIcon();
+        progress_bar_view.initModule();
+        open_modal.initModule();
+        change_icon_view.initModule();
     });
 
     // on browser resize...
     $(window).resize(function() {
-        moveProgressBar();
-
+        progress_bar_view.initModule();
     });
 
 

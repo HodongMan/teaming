@@ -97,7 +97,7 @@
 	width: 669px;
 	height: 29px;
 	border-radius: 100px;
-	border: solid 3px #ffffff;
+
 }
 .progress-wrap {
 	background: #fff;
@@ -106,10 +106,10 @@
 }
 
 .progress-bar {
+	position: absolute;
 	width:0px;
 	background: #1460a0;
-	border: solid 3px #ffffff;
-	position: absolute;
+	border-radius: 100px;
 	left: 0;
 	top: 0;
 }
@@ -367,6 +367,7 @@ span#procent::after {
 	background-color: #ffffff;
 	border: solid 2px #d2d9e7;
 	border-radius: 10px;
+	cursor:pointer;
 }
 
 .job_something .job_perfection{
